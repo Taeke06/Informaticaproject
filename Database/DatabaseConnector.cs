@@ -1,6 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 
-namespace ReadDatabase.Database
+namespace Informaticaproject.Database
 {
     public static class DatabaseConnector
     {
@@ -8,8 +8,8 @@ namespace ReadDatabase.Database
         public static List<Dictionary<string, object>> GetRows(string query)
         {
             // stel in waar de database gevonden kan worden
-            // string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=fastfood;Uid=lgg;Pwd=<jouwwachtwoordhier>;";
-            string connectionString = "Server=172.16.160.21;Port=3306;Database=fastfood;Uid=lgg;Pwd=CCSQrL8HwAJWyyzv;";
+            // string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=111110;Uid=111110;Pwd=Inf2022sql;";
+            string connectionString = "Server=172.16.160.21;Port=3306;Database=111110;Uid=111110;Pwd=Inf2022sql;";
 
             // maak een lege lijst waar we de namen in gaan opslaan
             List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
