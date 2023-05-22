@@ -16,7 +16,7 @@ namespace Informaticaproject.Database
 
 
             // verbinding maken met de database
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            /*using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 // verbinding openen
                 conn.Open();
@@ -43,7 +43,7 @@ namespace Informaticaproject.Database
                         rows.Add(row);
                     }
                 }
-            }
+            }*/
 
             // return de lijst met namen
             return rows;
