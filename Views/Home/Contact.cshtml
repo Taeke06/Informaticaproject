@@ -1,10 +1,19 @@
-﻿@{
+﻿@model Informaticaproject.Models.Person
+@{
     ViewData["Title"] = "Contact";
 }
 <h1>@ViewData["Title"]</h1>
 
 <form method= "post">
-    Voornaam: <input type="text" name="firstname" />
-    Achternaam: <input type="text" name="lastname" />
-    <input type="submit" value="opslaan" />
+    <div>Voornaam: <input type="text" name="firstname" /></div>
+    <div>Achternaam: <input type="text" name="lastname" /></div>
+    <div>E-mail: <input type="text" name="email" /></div>
+    <div>Telefoon: <input type="text" name="phone" /></div>
+    <div>Adres: <input type="text" name="adress" /></div>
+    <div>Beschrijving: <input type="text" name="description" /></div>
+    <input type="submit" value="verstuur" />
 </form>
+
+@if(Model!= null){
+<p>Hallo @Model.Firstname @Model.Lastname </p>
+}

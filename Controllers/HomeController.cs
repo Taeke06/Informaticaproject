@@ -36,19 +36,18 @@ namespace Informaticaproject.Controllers
         {
             return View();
         }
-
         public IActionResult Contact()
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult Contact(string firstname, string lastname)
-        {
-            ViewData["firstname"] = firstname;
-            ViewData["lastname"] = lastname;
 
-            return View();
+        [HttpPost]
+        public IActionResult Contact(Person person)
+        {
+            return View(person);
         }
+        
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

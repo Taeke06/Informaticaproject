@@ -1,9 +1,20 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Informaticaproject.Models
 {
     public class Person
     {
-        public string? RequestId { get; set; }
+        [Required]
+        public string? Firstname { get; set; }
+        [Required]
+        public string? Lastname { get; set; }
+        [Required]
+        public string? Email { get; set; }
 
-        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+        public string? Phone { get; set; }
+
+        public string? Address { get; set; }
+
+        public string? Description { get; set; }
     }
 }
