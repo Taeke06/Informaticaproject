@@ -4,11 +4,12 @@ namespace Informaticaproject.Models
 {
     public class Person
     {
-        [Required]
+        [Required(ErrorMessage = "Het vak 'Voornaam' is verplicht")]
         public string? Firstname { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Het vak 'Achternaam' is verplicht")]
         public string? Lastname { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Het vak 'Email' is verplicht")]
+        [EmailAddress(ErrorMessage = "Email is ongeldig")]
         public string? Email { get; set; }
 
         public string? Phone { get; set; }

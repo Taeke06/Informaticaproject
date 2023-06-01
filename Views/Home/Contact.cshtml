@@ -6,8 +6,11 @@
 
 <form method= "post">
     <div>Voornaam: <input type="text" name="firstname" /></div>
+    @Html.ValidationMessageFor(m => m.Firstname)
     <div>Achternaam: <input type="text" name="lastname" /></div>
+    @Html.ValidationMessageFor(m => m.Lastname)
     <div>E-mail: <input type="text" name="email" /></div>
+    @Html.ValidationMessageFor(m => m.Email)
     <div>Telefoon: <input type="text" name="phone" /></div>
     <div>Adres: <input type="text" name="adress" /></div>
     <div>Beschrijving: <input type="text" name="description" /></div>

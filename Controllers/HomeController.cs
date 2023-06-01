@@ -44,6 +44,9 @@ namespace Informaticaproject.Controllers
         [HttpPost]
         public IActionResult Contact(Person person)
         {
+            if (ModelState.IsValid)
+                return Redirect("/succes");
+           
             return View(person);
         }
         
