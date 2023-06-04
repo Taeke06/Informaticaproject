@@ -3,10 +3,43 @@
     ViewData["Title"] = "Home Page";
 }
 
+<style>
+    .titel{
+        color: #124566;
+    }
+
+    .square{
+        top: 30px;
+        height: 300px;
+        background-color: #badef7;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        width: 80%;
+        border-radius: 25px;
+    }
+
+    .text {
+        color: #124566;
+        font-size: 40px; 
+        margin-left: 2%;
+    }
+
+    .textsmall {
+        color: #124566;
+        font-size: 20px;
+        margin-left: 7%;
+    }
+    </style>
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="titel display-4"><b>De Partyboot</b></h1>
     @foreach(string naam in Model)
    { 
        <p> @naam</p>
    }
+</div>
+<div class="square">
+    <p class="text"><b>Summer Festival</b></p>
+    <p class="textsmall">15-07-2023 / 20-07-2023</p>
 </div>
