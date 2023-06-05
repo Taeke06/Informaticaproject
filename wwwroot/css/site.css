@@ -1,0 +1,18 @@
+.navbar-right {
+    width: auto;
+    float: right;
+    display: block;
+}
+
+.navbar-li {
+    display: inline-block;
+    float: right;
+}
+
+.bodyall {
+    background-color: #61b9d1;
+}
+
+.headerall {
+    background-color: #124566;
+}
