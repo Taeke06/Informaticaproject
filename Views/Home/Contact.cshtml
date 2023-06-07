@@ -6,7 +6,7 @@
 <style>
     .details {
         top: 30px;
-        height: 400px;
+        height: 500px;
         background-color: #badef7;
         position: relative;
         margin-right: auto;
@@ -15,14 +15,29 @@
         border-radius: 25px;
     }
 
-    .tekst {
+    .paragraaf {
+        text-align: center;
         margin-left: 2px;
+    }
+
+    .tekst {
+        text-align: center;
+        margin-left: 40%;
+        width: 100px;
+    }
+
+    .hoofdtekst {
+        text-align: center;
+    }
+
+    .verstuur {
+        margin-left: 45%;
     }
 </style>
 
 <div class="details">
-    <h1 class="tekst">Contact</h1>
-    <p class="tekst">Heb jij een vraag over een van de reizen? Stel ze gerust hier!</p>
+    <h1 class="hoofdtekst">Contact</h1>
+    <p class="paragraaf">Heb jij een vraag over een van de reizen? Stel ze gerust hier!</p>
 
 <form method= "post">
     <div class="tekst">Voornaam: <input type="text" name="firstname" /></div>
@@ -34,7 +49,8 @@
     <div class="tekst">Telefoon: <input type="text" name="phone" /></div>
     <div class="tekst">Adres: <input type="text" name="adress" /></div>
     <div class="tekst">Beschrijving: <input type="text" name="description" /></div>
-    <input type="submit" value="verstuur" />
+    <br>
+    <input class="verstuur" type="submit" value="verstuur" />
 </form>
 </div>
 
