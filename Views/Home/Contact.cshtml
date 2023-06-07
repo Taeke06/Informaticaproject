@@ -2,20 +2,41 @@
 @{
     ViewData["Title"] = "Contact";
 }
-<h1>@ViewData["Title"]</h1>
+
+<style>
+    .details {
+        top: 30px;
+        height: 400px;
+        background-color: #badef7;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        width: 80%;
+        border-radius: 25px;
+    }
+
+    .tekst {
+        margin-left: 2px;
+    }
+</style>
+
+<div class="details">
+    <h1 class="tekst">Contact</h1>
+    <p class="tekst">Heb jij een vraag over een van de reizen? Stel ze gerust hier!</p>
 
 <form method= "post">
-    <div>Voornaam: <input type="text" name="firstname" /></div>
+    <div class="tekst">Voornaam: <input type="text" name="firstname" /></div>
     @Html.ValidationMessageFor(m => m.Firstname)
-    <div>Achternaam: <input type="text" name="lastname" /></div>
+    <div class="tekst">Achternaam: <input type="text" name="lastname" /></div>
     @Html.ValidationMessageFor(m => m.Lastname)
-    <div>E-mail: <input type="text" name="email" /></div>
+    <div class="tekst">E-mail: <input type="text" name="email" /></div>
     @Html.ValidationMessageFor(m => m.Email)
-    <div>Telefoon: <input type="text" name="phone" /></div>
-    <div>Adres: <input type="text" name="adress" /></div>
-    <div>Beschrijving: <input type="text" name="description" /></div>
+    <div class="tekst">Telefoon: <input type="text" name="phone" /></div>
+    <div class="tekst">Adres: <input type="text" name="adress" /></div>
+    <div class="tekst">Beschrijving: <input type="text" name="description" /></div>
     <input type="submit" value="verstuur" />
 </form>
+</div>
 
 @if(Model!= null){
 <p>Hallo @Model.Firstname @Model.Lastname </p>

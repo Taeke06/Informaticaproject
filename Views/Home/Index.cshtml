@@ -30,8 +30,46 @@
         font-size: 20px;
         margin-left: 7%;
     }
+
+    .image {
+        position: absolute;
+        z-index: 1;
+        margin-left: 530px;
+        margin-top: -105px;
+        border-radius: 25%;
+        width: 450px;
+        height: 254px;
+    }
+
+      .cookie-container {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #124566;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            z-index: 9999;
+        }
+
+        .cookie-container p {
+            margin: 0;
+            color: #badef7;
+        }
+
+        .cookie-button {
+            background-color: #61b9d1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
     </style>
 
+    <body onload="checkcoockie()" class="homepage"></body>
 <div class="text-center">
     <h1 class="titel display-4"><b>De Partyboot</b></h1>
     @foreach(string naam in Model)
@@ -42,4 +80,23 @@
 <div class="square">
     <p class="text"><b>Summer Festival</b></p>
     <p class="textsmall">15-07-2023 / 20-07-2023</p>
+    <img class="image" src="https://edm.com/.image/ar_16:9,c_fill,cs_srgb,fl_progressive,g_faces:center,q_auto:good,w_768/MTY5OTc0ODc2NjU5MDAwOTA1/groove-cruise-2020-group.jpg">
 </div>
+
+<div class="cookie-container">
+        <p>Deze website maakt gebruik van cookies. Door verder te gaan, ga je akkoord met ons gebruik van cookies.</p>
+        <button class="cookie-button" onclick="acceptCookies()">Accepteren</button>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            // Opslaan dat de gebruiker de cookies heeft geaccepteerd
+            localStorage.setItem('cookiesAccepted', 'true');
+            // Verberg de cookie-melding
+            document.querySelector('.cookie-container').style.display = 'none';
+        }
+
+         if (document.cookie.indexOf('cookiesAccepted=') === -1) {
+            document.querySelector('.cookie-container').style.display = 'block';
+        }
+    </script>

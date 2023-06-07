@@ -2,11 +2,13 @@
     width: auto;
     float: right;
     display: block;
+    color: #badef7;
 }
 
 .navbar-li {
     display: inline-block;
     float: right;
+    color: #badef7;
 }
 
 .bodyall {
@@ -15,4 +17,8 @@
 
 .headerall {
     background-color: #124566;
+}
+
+.homepage {
+
 }
