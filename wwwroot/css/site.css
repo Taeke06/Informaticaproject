@@ -22,3 +22,9 @@
 .homepage {
 
 }
+
+.nav-button {
+    text-decoration: none;
+    color: #badef7;
+    margin-right: 10px;
+}
